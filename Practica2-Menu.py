@@ -1,20 +1,8 @@
-def mostrar_menu(opciones):
-    print('Seleccione una opción:')
-    for clave in sorted(opciones):
-        print(f' {clave}) {opciones[clave][0]}')
-
-
-def leer_opcion(opciones):
-    while (a := input('Opción: ')) not in opciones:
-        print('Opción incorrecta, vuelva a intentarlo.')
-    return a
-
-
-def ejecutar_opcion(opcion, opciones):
-    opciones[opcion][1]()
-
-
 import os
+
+
+   
+
 def pedirNumeros():
     a=int(input("Ingresa el valor de a:"))
     b=int(input("Ingresa el valor de b:"))
@@ -29,25 +17,31 @@ def mul(a,b):
 def div(a,b):
     return a/b
 def menu(a,b):
+
+
+
     while True:
-        print(f"Que tipo de operacion matematica deseas realizar con {a} y {b}\n\
-1 para sumar\n\
-2 para restar\n\
-3 para multiplicar\n\
-4 para dividir\n\
-5 para salir:")
+        print(f"Eligue la Operacion que quieres hacer  {a} y {b}\n\
+s para sumar\n\
+r para restar\n\
+m para multiplicar\n\
+d para dividir\n\
+x para salir:")
         opcion=input()
-        if opcion== 1:
+        if opcion=='s':
             print(f"Resultado es:{suma(a,b)}")
-        if opcion==2:
+        if opcion=='r':
             print(f"Resultado es:{resta(a,b)}")
-        if opcion==3:
+        if opcion=='m':
             print(f"Resultado es:{mul(a,b)}")
-        if opcion==4:
+        if opcion=='d':
             print(f"Resultado es:{div(a,b)}")
-        if opcion==5:
+        if opcion=='x':
             break
         input("Presione cualquier tecla")
         os.system("cls")
-a,b=pedirNumeros()
-menu(a,b)
+
+
+if __name__ =='__main__': # para llamar funciones de otro documento sin que se ejecute todo solo lo que pedi 
+    a,b=pedirNumeros()
+    menu(a,b)
