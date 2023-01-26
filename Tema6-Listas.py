@@ -1,9 +1,5 @@
 
 
-
-
-
-
 lista1 = list 
 
 lista1 = ["Roberto",1,2.3,True]
